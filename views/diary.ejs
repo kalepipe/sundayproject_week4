@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ('partials/head) %>
+    <link rel = "stylesheet" href = "/css/diary.css">
+    
+    <!-- to use fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" integrity="sha384-v8BU367qNbs/aIZIxuivaU55N5GPF89WBerHoGA4QTcbUjYiLQtKdrfXnqAcXyTv" crossorigin="anonymous">
+    
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <% include ('partials/header) %>
+    </header>
+
+    <!-- main -->
+    <main>
+        <!-- section -->
+        <sction class="main">
+            <!-- post -->
+            <% for(let post of posts) { %>
+            <!-- ejs 문법을 써서 posts 객체 배열의 개별 객체에 순차적으로 접근하기 위한 것은 알겠는데,
+            let post of posts는 처음 보는 문법이다. -->
+            <div class="post">
+                <div class="img">
+                        <img src="imgs/post/<%= post.id %>.jpg" alt="포스트 게시물 사진">
+                    </div>
+                    <div class="description">
+                        <h2><%= post.title %></h2>
+                        <p><%= post.content %></p>
+                        <span id = "more">
+                            <a href="/diary/<%= post.id %>">전체 글 보기</a>
+                        </span>
+                        <span id='date'>
+                            2020-03-02
+                        </span>
+                    </div>
+                </div>
+            <% } %>
+        </sction>
+    </main>
+
+        <!-- footer -->
+        <footer>
+            <% include ('partial/footer') %>
+        </footer>
+        
+        <i class="fas fa-arrow-circle-up fa-2x" id="home"></i>
+        
+        <script src = './public/js/common.js'></script>
+    </div>
+</body>
+</html>

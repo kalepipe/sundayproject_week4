@@ -1,0 +1,9 @@
+main{
+    color:white;
+    background-color: black;
+    padding: 2em 2%;
+}
+
+header,section{
+    text-align:center;
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ('partials/head') %>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body class="fade-in">
+    <!-- header -->
+    <header>
+        <%- include ('partials/header') %>
+    </header>
+
+    <main>
+        <!-- main section -->
+        <section>
+            <!-- articles -->
+            <div class="article">
+                <div>
+                    <h1>first article</h1>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita rem itaque inventore vero sed, deleniti corrupti dolore. Quae libero dolore ducimus est soluta officiis, voluptate neque quidem, nulla quod nemo autem culpa sequi! Dolores deserunt placeat quasi? Ipsam mollitia saepe voluptatibus veniam maiores excepturi, pariatur quia esse atque minus dolorem, assumenda repellendus aperiam ab labore quisquam cumque, debitis quos iusto! Assumenda beatae incidunt at nemo, debitis totam ad quaerat esse quos expedita dignissimos soluta repellat ex omnis velit nihil tempora laboriosam autem magni enim facere eligendi, ipsa, ducimus dolorum. Doloremque exercitationem itaque nam obcaecati quam quod quibusdam tempore asperiores vel.
+                    </p>
+                </div>
+                <div>
+                    <h1>first article</h1>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita rem itaque inventore vero sed, deleniti corrupti dolore. Quae libero dolore ducimus est soluta officiis, voluptate neque quidem, nulla quod nemo autem culpa sequi! Dolores deserunt placeat quasi? Ipsam mollitia saepe voluptatibus veniam maiores excepturi, pariatur quia esse atque minus dolorem, assumenda repellendus aperiam ab labore quisquam cumque, debitis quos iusto! Assumenda beatae incidunt at nemo, debitis totam ad quaerat esse quos expedita dignissimos soluta repellat ex omnis velit nihil tempora laboriosam autem magni enim facere eligendi, ipsa, ducimus dolorum. Doloremque exercitationem itaque nam obcaecati quam quod quibusdam tempore asperiores vel.
+                    </p>
+                </div>
+                <div>
+                    <h1>first article</h1>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita rem itaque inventore vero sed, deleniti corrupti dolore. Quae libero dolore ducimus est soluta officiis, voluptate neque quidem, nulla quod nemo autem culpa sequi! Dolores deserunt placeat quasi? Ipsam mollitia saepe voluptatibus veniam maiores excepturi, pariatur quia esse atque minus dolorem, assumenda repellendus aperiam ab labore quisquam cumque, debitis quos iusto! Assumenda beatae incidunt at nemo, debitis totam ad quaerat esse quos expedita dignissimos soluta repellat ex omnis velit nihil tempora laboriosam autem magni enim facere eligendi, ipsa, ducimus dolorum. Doloremque exercitationem itaque nam obcaecati quam quod quibusdam tempore asperiores vel.
+                    </p>
+                </div>
+                <div>
+                    <h1>first article</h1>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita rem itaque inventore vero sed, deleniti corrupti dolore. Quae libero dolore ducimus est soluta officiis, voluptate neque quidem, nulla quod nemo autem culpa sequi! Dolores deserunt placeat quasi? Ipsam mollitia saepe voluptatibus veniam maiores excepturi, pariatur quia esse atque minus dolorem, assumenda repellendus aperiam ab labore quisquam cumque, debitis quos iusto! Assumenda beatae incidunt at nemo, debitis totam ad quaerat esse quos expedita dignissimos soluta repellat ex omnis velit nihil tempora laboriosam autem magni enim facere eligendi, ipsa, ducimus dolorum. Doloremque exercitationem itaque nam obcaecati quam quod quibusdam tempore asperiores vel.
+                    </p>
+                </div>
+                <div>
+                    <h1>first article</h1>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita rem itaque inventore vero sed, deleniti corrupti dolore. Quae libero dolore ducimus est soluta officiis, voluptate neque quidem, nulla quod nemo autem culpa sequi! Dolores deserunt placeat quasi? Ipsam mollitia saepe voluptatibus veniam maiores excepturi, pariatur quia esse atque minus dolorem, assumenda repellendus aperiam ab labore quisquam cumque, debitis quos iusto! Assumenda beatae incidunt at nemo, debitis totam ad quaerat esse quos expedita dignissimos soluta repellat ex omnis velit nihil tempora laboriosam autem magni enim facere eligendi, ipsa, ducimus dolorum. Doloremque exercitationem itaque nam obcaecati quam quod quibusdam tempore asperiores vel.
+                    </p>
+                </div>
+                <div>
+                    <h1>first article</h1>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita rem itaque inventore vero sed, deleniti corrupti dolore. Quae libero dolore ducimus est soluta officiis, voluptate neque quidem, nulla quod nemo autem culpa sequi! Dolores deserunt placeat quasi? Ipsam mollitia saepe voluptatibus veniam maiores excepturi, pariatur quia esse atque minus dolorem, assumenda repellendus aperiam ab labore quisquam cumque, debitis quos iusto! Assumenda beatae incidunt at nemo, debitis totam ad quaerat esse quos expedita dignissimos soluta repellat ex omnis velit nihil tempora laboriosam autem magni enim facere eligendi, ipsa, ducimus dolorum. Doloremque exercitationem itaque nam obcaecati quam quod quibusdam tempore asperiores vel.
+                    </p>
+                </div>
+            </div>
+            <!-- end of article section -->
+
+            <!-- drawings -->
+            <div class="drawing">
+                <% imgs.forEach(img => { %>
+                <!-- ejs의 반복문의 문법을 살펴보고 온다
+                ejs에서는 자바스크립트 코드를 <% %> 안에 쓴다. 따로 문법이 있는 것은 아니다.  -->
+                    <div>
+                        <img src="imgs/music/<%= img.id %>.jpg" alt="<%= img.id %> ">
+                    </div>
+                <% }) %>
+            </div>
+            <!-- router.js에서 지정한 router.get('/', (req,res) => {...})에 정의되어 있다 -->
+
+        </section>
+
+        <!-- side section -->
+        <aside>
+            <div class="contact-info">
+                <b>CONTACT</b>
+                <p>
+                  김선중 / Seon Kim
+                  <br>
+                  moleskindiary@gmail.com
+                  <br>
+                  sustainablediary.com
+                </p>
+                <br>
+            </div>
+
+            <div class="insta-photo">
+                <b>INSTAGRAM</b>
+                
+                <div id="instagram-embed">
+                <img alt="instagram-image" id="img1">
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <!-- footer -->
+    <footer>
+      SUSTAINABLE DIARY&copy;
+      <br>
+      <span id="since">SINCE 2017</span>
+      <i class="fas fa-arrow-circle-up fa-2x" id="home"></i>
+    </footer>
+    <i class="fas fa-chevron-circle-up fa-2x" id="home"></i>
+
+    <!-- common.js -->
+    <script src="../js/common.js"></script>
+    <!-- 경로를 설정하는 코드가 명쾌하게 이해되지 않는다.
+    ""../public/js/common.js"가 되어야 하는 것이 아닌가? 
+    어떻게 public은 중간에서 빠질 수 있는가?
+    -->
+</body>
+</html>
