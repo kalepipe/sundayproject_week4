@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <%- include ('partials/head') %>
+    <%- include ./partials/head %>
+
+    <link rel="stylesheet" href="/css/common.css">
     <link rel="stylesheet" href="/css/post.css">
+    <!-- 경로에 대한 지정이 혼란스럽다 -->
+
 </head>
 <body>
     <!-- header -->
     <header>
-        <%- include ('partials/header') %>
+        <%- include ./partials/header %>
     </header>
 
 
@@ -29,9 +33,9 @@
 
     <!-- footer -->
     <footer>
-        <%- include ('partials/footer') %> 
+        <%- include ./partials/footer %>
     </footer>
 
-    <script src="../js/common.js"></script>
+    <script src="js/common.js"></script>
 </body>
 </html>

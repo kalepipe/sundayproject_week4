@@ -1,4 +1,4 @@
-div .contents{
+main{
     margin : 1em auto;
     max-width : 50%;
     font-size : 1.5em;
@@ -55,7 +55,7 @@ input[type=submit] {
 
 
 @media only screen and (max-width : 900px){
-    div .contents{
+    main {
         margin: 0 auto;
         max-width: 70%;
     }

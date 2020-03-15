@@ -1,95 +1,93 @@
-/* contents */
-div .contents {
+
+/* main */
+main {
     /* grid! */
     display : grid;
     padding: 1em;
+    background-color :#ecf0f1;
 }
 
-    /* main */
-    .main {
-        background-color :#ecf0f1;
-    }
-        /* grid container */
-        section .article {
-            display : grid;
-            gap : 0.5em;
-            background-color : white;
-        }
-            /* grid item  */
-            .article > div {
-                max-height: 20em;
-                border : 1px #bdc3c7 solid;
-
-                padding: 1em;
-                /* margin : 0.5em 0.5em; */
-            }
-
-            .article > div:hover {
-                opacity: 0.5;
-                transition: 0.1s;
-            }
-
-            .article h2{
-                text-indent: 0.2em;
-            }
-
-            .article p{
-                max-height: 12em;
-                overflow: hidden;
-            }
-
-
-        /* grid container - 만들면서 구체화 시킬 것 */
-        section .drawing{
-            display : grid;
-            grid-template-columns : 1fr 1fr 1fr;
-            grid-gap: 1em;
-            
-            background-color: white;
-            margin-top : 1em;
-            padding : 1em;
-        }
-            .drawing > div {
-                background-color: black;
-                align-self: start;
-            }
-
-            .drawing > div:hover{
-                opacity: 0.6;
-                transition: 0.2s;
-            }
-
-            img {
-                width: 100%;
-                height: 100%;
-                display: block;
-                object-fit : cover;
-            }
-
-    /* side section */
-
-    aside {
-        padding : 1em;
+    /* grid container */
+    section .article {
+        display : grid;
+        gap : 0.5em;
         background-color : white;
-        line-height : 40px;
-        box-shadow: 1px 2px 5px black;
     }
-        aside b{
-            font-size : 1.5em;
+        /* grid item  */
+        .article > div {
+            max-height: 20em;
+            border : 1px #bdc3c7 solid;
+
+            padding: 1em;
+            /* margin : 0.5em 0.5em; */
         }
 
-        #instagram-embed{
-            width : 100%;
-            margin : 1em auto;
+        .article > div:hover {
+            opacity: 0.5;
+            transition: 0.1s;
         }
+
+        .article h2{
+            text-indent: 0.2em;
+        }
+
+        .article p{
+            max-height: 12em;
+            overflow: hidden;
+        }
+
+
+    /* grid container - 만들면서 구체화 시킬 것 */
+    section .drawing{
+        display : grid;
+        grid-template-columns : 1fr 1fr 1fr;
+        grid-gap: 1em;
+        
+        background-color: white;
+        margin-top : 1em;
+        padding : 1em;
+    }
+        .drawing > div {
+            background-color: black;
+            align-self: start;
+        }
+
+        .drawing > div:hover{
+            opacity: 0.6;
+            transition: 0.2s;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit : cover;
+        }
+
+/* side section */
+
+aside {
+    padding : 1em;
+    margin : 0 2em 0 0;
+    background-color : white;
+    line-height : 40px;
+    box-shadow: 1px 2px 5px black;
+}
+    aside b{
+        font-size : 1.5em;
+    }
+
+    #instagram-embed{
+        width : 100%;
+        margin : 1em auto;
+    }
 
 /* RESPONSIVE (mobile first) */
 
 /* mobile (0~690px) */
 @media only screen and (max-width : 690px){
-    div .contents{
+    main{   
         display : block;
-
         margin: 0 auto;
         padding: 1em;
     }
@@ -100,9 +98,9 @@ div .contents {
     
 /* 691px 이상에 적용 */
 @media only screen and (min-width : 691px){
-    div .contents{
+    main {
         grid-template-columns: 70% 30%;
-        gap : 1em;
+        grid-gap : 1em;
     }
     section .article {
         grid-template-columns: 1fr 1fr;
@@ -116,7 +114,7 @@ div .contents {
 
 /* 1000px 이하에서 aside가 아래로 + aside 내에서 column 2개로 변환 */
 @media only screen and (max-width: 1000px){
-    div .contents{
+    main {
         grid-template-columns: 1fr;
     }
 

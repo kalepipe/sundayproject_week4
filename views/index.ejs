@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <%- include ('partials/head') %>
+    <%- include ./partials/head %>
     <link rel="stylesheet" href="css/index.css">
+
+    <!-- to use fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" integrity="sha384-v8BU367qNbs/aIZIxuivaU55N5GPF89WBerHoGA4QTcbUjYiLQtKdrfXnqAcXyTv" crossorigin="anonymous">
+
 </head>
 <body class="fade-in">
     <!-- header -->
     <header>
-        <%- include ('partials/header') %>
+        <%- include ./partials/header %>
     </header>
 
     <main>
@@ -60,7 +64,7 @@
                 <!-- ejs의 반복문의 문법을 살펴보고 온다
                 ejs에서는 자바스크립트 코드를 <% %> 안에 쓴다. 따로 문법이 있는 것은 아니다.  -->
                     <div>
-                        <img src="imgs/music/<%= img.id %>.jpg" alt="<%= img.id %> ">
+                        <img src="imgs/home/<%= img.id %>.jpg" alt="<%= img.id %> ">
                     </div>
                 <% }) %>
             </div>
@@ -70,39 +74,21 @@
 
         <!-- side section -->
         <aside>
-            <div class="contact-info">
-                <b>CONTACT</b>
-                <p>
-                  김선중 / Seon Kim
-                  <br>
-                  moleskindiary@gmail.com
-                  <br>
-                  sustainablediary.com
-                </p>
-                <br>
-            </div>
-
-            <div class="insta-photo">
-                <b>INSTAGRAM</b>
-                
-                <div id="instagram-embed">
-                <img alt="instagram-image" id="img1">
-                </div>
-            </div>
+            <%- include ./partials/aside %>
         </aside>
     </main>
 
     <!-- footer -->
     <footer>
-      SUSTAINABLE DIARY&copy;
+      Sustainable Diary&copy;
       <br>
-      <span id="since">SINCE 2017</span>
+      <span id="since">Since 2017</span>
       <i class="fas fa-arrow-circle-up fa-2x" id="home"></i>
     </footer>
     <i class="fas fa-chevron-circle-up fa-2x" id="home"></i>
 
     <!-- common.js -->
-    <script src="../js/common.js"></script>
+    <script src="js/common.js"></script>
     <!-- 경로를 설정하는 코드가 명쾌하게 이해되지 않는다.
     ""../public/js/common.js"가 되어야 하는 것이 아닌가? 
     어떻게 public은 중간에서 빠질 수 있는가?

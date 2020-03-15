@@ -21,9 +21,11 @@ router.get('/',(req,res)=>{
 router.get('/profile',(req,res)=>{
     res.render('profile.html');
 });
+
 // project
 router.get('/project',(req,res)=>{
     res.render('project.html');
+
 });
 // gallery
 router.get('/gallery',(req,res)=>{
@@ -36,7 +38,6 @@ router.get('/diary',(req,res)=>{
 });
 // posts 변수는 위에 선언되어 있다. diary 게시물 데이터를 json 형태로 저장했다. 
 // 따라서 posts.id, post.title, post.content를 사용할 수 있다. 
-
 
 // diary post
 router.get('/diary/:postId',(req,res)=>{

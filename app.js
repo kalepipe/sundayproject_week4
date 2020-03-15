@@ -8,12 +8,12 @@ const livereload = require('livereload');
 const connectLivereload = require('connect-livereload');
 
 const livereloadServer = livereload.createServer();
-
 livereloadServer.watch(['public', path.join(__dirname,'views')]);
 //livereloadServer가 감시할 폴더를 지정한다.
 //path 모듈을 사용한다. 
 //public 폴더와, path.join(__dirname,'views') 폴더를 감시한다. 
-//path.join(__dirname, 'views') : 무엇을 의미하는지 질문 
+//path.join(__dirname, 'views') : ${현재디렉토리}/views를 의미한다. 
+//'public'은 그냥 적고, 'views' 폴더는 path.join을 사용하는 이유는 무엇인가? 
 livereloadServer.server.once("connection",()=>{
     setTimeout(()=>{
         livereloadServer.refresh("/");
@@ -25,7 +25,7 @@ livereloadServer.server.once("connection",()=>{
 
 
 // create router
-var indexRouter = require('./routes/router.js');
+var indexRouter = require('./routes/router');
 // indexRouter은 ./routes/router 모듈을 가져온다. 
 // 요청에 따라서 router 모듈에 있는 함수가 실행된다. (router.js에 정의되어 있다.)
 // router.js 파일에 함수가 어떻게 정의도어 있는지 확인하고 돌아오자. 
@@ -46,24 +46,25 @@ app.set('view engine','ejs');
 // views : request 요청에 대한 로직을 처리한 후 클라이언트에 응답을 보낼 때 html 코드로 변환해서 반환하는 파일을 정의한 폴더입니다.  
 // 여기선 ejs 템플릿을 사용합니다. 
 
+
+app.use(express.static('/public'));
+// 정적파일을 제공하는 폴더를 정의하는 부분이다. 
+// 정적인 파일이 위치할 폴더는 'public' 폴더다. 
+app.use(partials());
+// 설명 요청
+
 app.engine('html', require('ejs').renderFile);
+// 템플릿 설정 변경 : html 형식의 파일을 템플릿으로 사용하겠다는 선언(질문)
 // 화면 템플릿 엔진을 ejs로 설정한다. 
 // 템플릿 엔진이란, 템플릿을 읽어 엔진의 문법과 설정에 따라서 파일을 HTML 형식으로 변환시키는 모듈입니다. 
 // app.engine이 하는 역할은 무엇인가? 인자는 무엇인가? 
 
-app.use(express.static('public'));
-// 정적파일을 제공하는 폴더를 정의하는 부분이다. 
-// 정적인 파일이 위치할 폴더는 'public' 폴더다. 
-
-app.use(partials());
-// 설명 요청
-
 app.use('/', indexRouter);
 // '/' 주소로 요청이 들어왔을 때 indexRouter가 실행되게 한다. 
 
-app.listen(3000, function(){
-  console.log("express server heard on 8000");
-  console.log("let's go to http://localhost:8000");
+app.listen(8010, function(){
+  console.log("express server heard on 8010");
+  console.log("let's go to http://localhost:8010");
 });
 
 

@@ -1,9 +1,5 @@
 main{
-    color:white;
-    background-color: black;
+    color:black;
+    background-color: #ecf0f1;
     padding: 2em 2%;
-}
-
-header,section{
-    text-align:center;
 }
