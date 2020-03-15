@@ -14,6 +14,7 @@ router.get('/',(req,res)=>{
 });
 // ejs의 문법을 알면 이해할 수 있는 내용이다. 
 // (질문) res.render에 첫번째 인자인 'index'는 'index.ejs' 파일을 뜻하는가?
+// view engine으로 ejs를 사용하겠다고 해놓았고, 폴더도 views로 세팅해놨기 때문에 상대경로 사용 가능 (app.js)
 // imgs 변수에 배열을 담아서 보내고 있다. 배열에 담겨있는 값은 객체다. 
 // '/' url로 요청이 들어왔을 때 index.ejs를 render 하면서 img 변수의 값이 적용된다. 
 
@@ -42,8 +43,8 @@ router.get('/diary',(req,res)=>{
 // diary post
 router.get('/diary/:postId',(req,res)=>{
     const postId = req.params.postId
-    res.locals.post = posts[postId-1];
-    res.render('post');
+    const post = posts[postId-1];
+    res.render('post',{post:post});
   });
 // post 상세페이지로 이동하는 라우팅이다. 
 // 사용자가 상세페이지를 누르면, /diary/:poistId로 이동한다. 

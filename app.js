@@ -47,11 +47,11 @@ app.set('view engine','ejs');
 // 여기선 ejs 템플릿을 사용합니다. 
 
 
-app.use(express.static('/public'));
+app.use(express.static(path.join(__dirname, '/public')));
 // 정적파일을 제공하는 폴더를 정의하는 부분이다. 
 // 정적인 파일이 위치할 폴더는 'public' 폴더다. 
 app.use(partials());
-// 설명 요청
+// partials 기능을 추가 <%- include %> 기능을 사용하기 위함
 
 app.engine('html', require('ejs').renderFile);
 // 템플릿 설정 변경 : html 형식의 파일을 템플릿으로 사용하겠다는 선언(질문)
@@ -66,6 +66,7 @@ app.listen(8010, function(){
   console.log("express server heard on 8010");
   console.log("let's go to http://localhost:8010");
 });
+//서버를 키는 기능. 
 
 
 
