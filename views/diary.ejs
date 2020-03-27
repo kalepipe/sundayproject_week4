@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include ('includes/head') %>
+    <link rel="stylesheet" href="css/diary.css" />
+
+    <!-- to use fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.12.1/css/all.css"
+      integrity="sha384-v8BU367qNbs/aIZIxuivaU55N5GPF89WBerHoGA4QTcbUjYiLQtKdrfXnqAcXyTv"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <!-- header -->
+    <header>
+      <%- include ('includes/header') %>
+    </header>
+
+    <!-- main -->
+    <main>
+      <!-- section -->
+      <sction class="main">
+        <!-- post -->
+        <div class="post">
+          <div class="img">
+            <img src="" alt="포스트 게시물 사진" />
+          </div>
+          <div class="description">
+            <h2></h2>
+            <p></p>
+            <span id="more">
+              <a href="">전체 글 보기</a>
+            </span>
+            <span id="date">
+              2020-03-02
+            </span>
+          </div>
+        </div>
+      </sction>
+    </main>
+
+    <!-- footer -->
+    <footer>
+      <%- include ('includes/footer') %>
+    </footer>
+
+    <i class="fas fa-arrow-circle-up fa-2x" id="home"></i>
+
+    <script src="../libs/common.js"></script>
+  </body>
+</html>

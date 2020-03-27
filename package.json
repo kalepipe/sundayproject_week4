@@ -6,9 +6,11 @@
     "watch": "nodemon --ext js,ejs --ignore public"
   },
   "dependencies": {
+    "axios": "^0.19.2",
     "debug": "~2.6.9",
     "dotenv": "^8.2.0",
-    "ejs": "^2.6.2",
+    "ejs": "^3.0.1",
+    "ejs-lint": "^1.0.1",
     "express": "^4.17.1",
     "express-partials": "^0.3.0",
     "express-session": "^1.17.0",

@@ -1,32 +1,30 @@
-const express = require("express")
-const router = express.Router()
-const indexController = require("./controllers/index")
-// const postController = require("./controllers/post")
-// const guestController = require("./controllers/visitor")
+const express = require('express');
+const router = express.Router();
+const indexController = require('./controllers/index');
+const postController = require('./controllers/post');
+const guestController = require('./controllers/visitor');
 
 // const posts = require('../public/data/diary.json');
 
 // home
-router.get("/", indexController.home)
+router.get('/', indexController.home);
 
 // profile
-// router.get("/profile", (req, res) => {
-//   res.render("profile.ejs")
-// })
+router.get('/profile', indexController.profile);
 
 // project
-// router.get("/project", (req, res) => {
-//   res.render("project.ejs")
-// })
+router.get('/project', indexController.project);
 
 // gallery
-// router.get("/gallery", (req, res) => {
-//   res.render("gallery.ejs")
-// })
+router.get('/gallery', indexController.gallery);
 
 // diary
-// router.get("/diary", (req, res) => {
-//   res.render("diary")
-// })
+router.get('/diary', postController.diary);
 
-module.exports = router
+// visitor
+router.get('/visitor', guestController.visitorPageView);
+router.post('/visitor', guestController.createPost);
+router.post('/visitor/:postId/update', guestController.updatePost);
+router.get('/visitor/:postId/delete', guestController.deletePost);
+
+module.exports = router;

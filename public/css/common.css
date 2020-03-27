@@ -1,206 +1,208 @@
 @import url('https://fonts.googleapis.com/css?family=Merriweather+Sans&display=swap');
 
 /* css initialize */
-html, body {
-    margin : 0;
-    padding : 0;
-    box-sizing : border-box;
-    scroll-behavior: smooth;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 /* font face */
 a {
-    color : white;
+  color: white;
 }
 header a {
-    font-size : 1em;
-    font-family: 'Merriweather Sans';
-    font-weight: 700;
-    text-decoration : none;
+  font-size: 1em;
+  font-family: 'Merriweather Sans';
+  font-weight: 700;
+  text-decoration: none;
 }
 
 /* container : 전체 배경색상 지정 */
 .container {
-    background-color: #ecf0f1;
+  background-color: #ecf0f1;
 }
 
 div .contents {
-    margin : 1.5em auto;
-    max-width:90%;
+  margin: 1.5em auto;
+  max-width: 90%;
 }
 
 /* header - main logo */
 .logo {
-    background-color :white;
-    color : #8e44ad;
-    text-align: center;
-    padding : 1em;
-    /* font-family : Oswald; */
-    font-size : 3em;
+  background-color: white;
+  color: #8e44ad;
+
+  font-size: 3em;
+  font-weight: bold;
+  text-align: center;
+
+  padding: 1em;
+  /* font-family : Oswald; */
 }
 
-.logo a{
-    color : #8e44ad;
+.logo a {
+  color: #8e44ad;
+  text-decoration: none;
 }
 
 /* header - hamburger */
-#hamburger{
-    display : none;
-    float : right;
-    line-height : 38px;
-    position : relative;
-    right : 10px;
+#hamburger {
+  display: none;
+  float: right;
+  line-height: 38px;
+  position: relative;
+  right: 10px;
 }
 
 #pop-up {
-    display: none;
-    background-color: #ffffff;
-    color: white;
-    position: absolute;
-    right: 0;
-    width: 33vw;
+  display: none;
+  background-color: #ffffff;
+  color: white;
+  position: absolute;
+  right: 0;
+  width: 33vw;
 }
 
-
 #pop-up div {
-    display : flex;
-    flex-direction : column;
-    text-align : center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 #pop-up a {
-    background-color : #8e44ad;
-    padding : 1.2em;
-    text-decoration : none;
+  background-color: #8e44ad;
+  padding: 1.2em;
+  text-decoration: none;
 }
 
 #pop-up a:hover {
-    background-color : white;
-    color: #8e44ad
+  background-color: white;
+  color: #8e44ad;
 }
 
 /* header - navigation */
 .nav-flex-container {
-    display : flex;
-    /* flex-direction : row; */
-    justify-content: center;
-    flex-wrap : wrap;
+  display: flex;
+  /* flex-direction : row; */
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-nav{
-    text-align: center;
-    padding: 0;
-    background-color: #8e44ad;
+nav {
+  text-align: center;
+  padding: 0;
+  background-color: #8e44ad;
 }
 
 nav > a {
-    padding: 0.2em;
-    margin: 0.5em 1em;
+  padding: 0.2em;
+  margin: 0.5em 1em;
 
-    /* font settings */
-    color: white;
-    font-family : 'Noto Sans KR', sans-serif;
-    font-size: 1.8em;
-    font-weight: 700;
-    text-decoration: none;
-    letter-spacing : 1px;
+  /* font settings */
+  color: white;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 1.8em;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 1px;
 }
 
 nav a:visited {
-    color : #ecf0f1;
-    font-style : normal;
+  color: #ecf0f1;
+  font-style: normal;
 }
 
-nav a:hover{
-    background-color : #9b59b6;
-    color : #ecf0f1;
+nav a:hover {
+  background-color: #9b59b6;
+  color: #ecf0f1;
 }
 
 a .active:visited {
-    color : #ecf0f1;
+  color: #ecf0f1;
 }
 
-
-.active{
-    font-weight : 900;
-    /* position:  */
+.active {
+  font-weight: 900;
+  /* position:  */
 }
 
 .active:visited {
-    color : #f1c40f;
+  color: #f1c40f;
 }
 
 /* contents */
-div .contents{
-    margin : 0 auto;
+div .contents {
+  margin: 0 auto;
 }
 
 /* footer */
 footer {
-    color : white;
-    background-color : #8e44ad;
-    text-align : center;
-    padding : 10px;
-    
-    font-size: 1em;
-    font-family : Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+  color: white;
+  background-color: #8e44ad;
+  text-align: center;
+  padding: 10px;
+
+  font-size: 1em;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 #home {
-    color : white;
-    text-shadow: 2px 4px 3px black;
-    display : none;
-    position : fixed;
-    right: 15px;
-    bottom: 25px;
+  color: white;
+  text-shadow: 2px 4px 3px black;
+  display: none;
+  position: fixed;
+  right: 15px;
+  bottom: 25px;
 }
 
 .appear {
-    display: block !important;
+  display: block !important;
 }
 
-
 /* smartphone ~ 690 */
-@media only screen and (max-width : 690px){
-    #hamburger {
-        display : block;
-    }
+@media only screen and (max-width: 690px) {
+  #hamburger {
+    display: block;
+  }
 
-    .logo {
-        background-color: #8e44ad;
-        padding : 1em;
-        font-size : 2em;
-    }
+  .logo {
+    background-color: #8e44ad;
+    padding: 1em;
+    font-size: 2em;
+  }
 
-    .logo a {
-        color : white;
-    }
+  .logo a {
+    color: white;
+  }
 
-    nav {
-        display : none !important;
-    }
+  nav {
+    display: none !important;
+  }
 
-    div .contents {
-        max-width : 100%;
-        font-size : 11px;
-    }
+  div .contents {
+    max-width: 100%;
+    font-size: 11px;
+  }
 
-    footer {
-        text-align : center;
-        padding : 1.2em;
-        font-size : 1em;
-    }
+  footer {
+    text-align: center;
+    padding: 1.2em;
+    font-size: 1em;
+  }
 
-    #since {
-        display : none;
-    }
+  #since {
+    display: none;
+  }
 }
 
 /* tablet + desktop () ~  */
-@media only screen and (min-width : 691px){
-    #pop-up {
-        display: none !important;
-    }
+@media only screen and (min-width: 691px) {
+  #pop-up {
+    display: none !important;
+  }
 }
 
 /* //only desktop 760px ~

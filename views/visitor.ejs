@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include ('includes/head') %>
+  </head>
+
+  <body>
+    <!-- header -->
+    <header>
+      <%- include ('includes/header') %>
+    </header>
+
+    <!-- main -->
+    <main>
+      <!-- main section -->
+      <div>
+        <!-- write new guestpost -->
+        <h1>방명록</h1>
+
+        <!-- guestpost form -->
+        <section class="guestPostFormSection">
+          <h2>이 곳을 방문한 소감을 남겨주세요.</h2>
+          <form action="/visitor" method="post" id="guestPostForm">
+            <textarea name="content" id="guestPostTxt" autofucus="autofucus"></textarea>
+            <button type="submit" id="guestPostSubmitBtn">전송하기</button>
+          </form>
+        </section>
+
+        <!-- get guest posts -->
+        <section>
+          <% guestPosts.forEach((guestPost, index) => {%>
+          <div class="guestPosts">
+            <h3><%= guestPosts.length - index %> 번 글</h3>
+            <p>
+              <div class=guestPostContent><%= guestPost.content %></div>
+              <br />
+              <span class="published"
+                ><%=`${(!guestPost.updated)? '포스트' : '업데이트'} / 작성일자 :
+                ${guestPost.updatedDate.toLocaleString()}`%></span
+              >
+            </p>
+            <a href="/visitor/<%= guestPost._id %>/update"><button id='postUpdateBtn'>수정</button></a>
+            <a href="/visitor/<%= guestPost._id %>/delete"><button>삭제</button</a>
+          </div>
+          <% })%>
+        </section>
+      </div>
+    </main>
+
+    <!-- footer -->
+    <footer>
+      <%- include ('includes/footer') %>
+    </footer>
+
+    <i class="fas fa-arrow-circle-up fa-2x" id="home"></i>
+
+    <script src="../libs/common.js"></script>
+    <script src="../libs/visitors.js"></script>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include ('includes/head') %>
+    <link rel="stylesheet" href="/css/common.css" />
+    <link rel="stylesheet" href="/css/profile.css" />
+
+    <!-- to use fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.12.1/css/all.css"
+      integrity="sha384-v8BU367qNbs/aIZIxuivaU55N5GPF89WBerHoGA4QTcbUjYiLQtKdrfXnqAcXyTv"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <header>
+      <%- include ('includes/header') %>
+    </header>
+
+    <!-- contents -->
+    <main>
+      <section class="main">
+        <div class="profile-info" id="item1">
+          <!-- profile image -->
+          <div id="img-wrapper">
+            <img src="imgs/profile.jpg" alt="profile" />
+          </div>
+          <br />
+          <!-- profile letter -->
+          <div id="profile-letter">
+            안녕하세요. 블로그 운영자 김선중입니다. 프론트앤드 개발자 이동규 님께 HTML, CSS, Javascript를 배우고 있습니다.
+          </div>
+        </div>
+
+        <!-- form -->
+        <form class="input-form" action="" id="item2">
+          <b>Contact</b>
+          <br /><br />
+          <label for="name">이름</label><br />
+          <input type="text" />
+          <br />
+          <label for="contact">연락처(email, kakao, phone)</label><br />
+          <input type="text" />
+          <br />
+          <label for="message">남기실 말</label><br />
+          <textarea name="message" id="" cols="30" rows="10"></textarea>
+          <br />
+          <input type="submit" value="보내기" />
+        </form>
+      </section>
+    </main>
+
+    <!-- footer -->
+    <footer>
+      <%- include ('includes/footer') %>
+    </footer>
+
+    <i class="fas fa-arrow-circle-up fa-2x" id="home"></i>
+
+    <script src="../libs/common.js"></script>
+  </body>
+</html>
