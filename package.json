@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "watch": "nodemon --ext js,ejs --ignore public"
+    "watch": "nodemon --ext js"
   },
   "dependencies": {
     "axios": "^0.19.2",

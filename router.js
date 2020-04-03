@@ -24,7 +24,7 @@ router.get('/diary', postController.diary);
 // visitor
 router.get('/visitor', guestController.visitorPageView);
 router.post('/visitor', guestController.createPost);
-router.post('/visitor/:postId/update', guestController.updatePost);
+router.put('/visitor/:postId/update', guestController.updatePost);
 router.get('/visitor/:postId/delete', guestController.deletePost);
 
 module.exports = router;
