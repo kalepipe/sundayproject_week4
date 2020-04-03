@@ -1,14 +1,17 @@
-main{
+main {
   color: black;
-  background-color: #ecf0f1;
+  background-color: white;
   padding: 1em;
+  margin: 2rem 1rem;
 }
 
-.post{
+.post {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 1em;
-  margin-bottom: 1em;;
+  margin-bottom: 1em;
+  padding: 1.5rem 1rem;
+  border: 2px solid rgba(128, 128, 128, 0.5);
 }
 
 img {
@@ -18,16 +21,45 @@ img {
   object-fit: cover;
 }
 
-.description span{
-  color : black;
-  font-size : small;
+.description {
+  position: relative;
+}
+
+.description h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.description p {
+  height: 3rem;
+  margin: 1rem 0;
+}
+
+.description span {
+  color: black;
+  font-size: small;
   cursor: pointer;
 }
 
-#more > a{
-  color : black;
+#more > a {
+  color: black;
 }
 
-#date{
-  float : right;
+#date {
+  /* float: right; */
+  text-align: right;
+  position: relative;
+  left: 40%;
+}
+
+.createPost {
+  width: 100%;
+  text-align: right;
+  margin-bottom: 1rem;
+}
+
+.createPost #createPostButton {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  margin: 1rem;
 }

@@ -3,33 +3,37 @@
   <head>
     <link rel="stylesheet" href="/css/common.css" />
     <link rel="stylesheet" href="/css/post.css" />
-    <!-- 경로에 대한 지정이 혼란스럽다 -->
   </head>
   <body>
     <!-- header -->
     <header>
-      <%- include ('partials/header') %>
+      <%- include ('includes/header') %>
     </header>
 
     <!-- main -->
     <main>
-      <article>
+      <article class="postView">
         <header>
           <h1><%= post.title %></h1>
         </header>
         <section>
-          <img src="/imgs/post/<%= post.id %>.jpg" alt="" width="60%" />
-          <br />
-          <p>
-            <%= post.content %>
-          </p>
+          <p><%= post.content %></p>
         </section>
       </article>
     </main>
 
+    <div class="editButtons">
+      <a href="/diary/<%= post._id %>/update"
+        ><button id="updateButton">수정하기</button></a
+      >
+      <a href="/diary/<%= post._id %>/delete"
+        ><button id="deleteButton">삭제하기</button></a
+      >
+    </div>
+
     <!-- footer -->
     <footer>
-      <%- include ('partials/footer') %>
+      <%- include ('includes/footer') %>
     </footer>
 
     <script src="../libs/common.js"></script>

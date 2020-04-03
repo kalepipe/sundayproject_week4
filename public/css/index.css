@@ -3,7 +3,7 @@ main {
   /* grid! */
   display: grid;
   padding: 1em;
-  background-color: #ecf0f1;
+  background-color: white;
 }
 
 /* grid container */

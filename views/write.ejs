@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include ('includes/head') %>
+    <link rel="stylesheet" href="/css/write.css" />
+
+    <!-- to use fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.12.1/css/all.css"
+      integrity="sha384-v8BU367qNbs/aIZIxuivaU55N5GPF89WBerHoGA4QTcbUjYiLQtKdrfXnqAcXyTv"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- header -->
+    <header>
+      <%- include ('includes/header') %>
+    </header>
+
+    <!-- main -->
+    <main>
+      <h1>오늘의 생각을 적어주세요.</h1>
+      <div class="postWrite">
+        <form action="/diary" method="post" enctype="multipert/form-data">
+          <div class="postWrite-title">
+            <label class="postTitle" for="title">제목</label><br />
+            <input type="title" name="title" /><br />
+          </div>
+          <div class="postWrite-content">
+            <label class="postContent" for="title">내용</label><br />
+            <div class="content">
+              <textarea name="content" id="contentBody" required></textarea
+              ><br />
+            </div>
+          </div>
+          <input type="file" name="postImage" id="postImageUploader" /><br />
+          <div class="submitButton">
+            <button type="submit" class="btn btn-primary" id="postSubmit">
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <!-- footer -->
+    <footer>
+      <%- include ('includes/footer') %>
+    </footer>
+
+    <i class="fas fa-arrow-circle-up fa-2x" id="home"></i>
+
+    <script src="../libs/common.js"></script>
+    <script src="../libs/write.js"></script>
+  </body>
+</html>

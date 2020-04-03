@@ -2,8 +2,10 @@
 <html lang="en">
   <head>
     <%- include ('includes/head') %>
+    <link rel="stylesheet" href="../css/visitor.css">
+    
   </head>
-
+  
   <body>
     <!-- header -->
     <header>
@@ -30,15 +32,15 @@
         <section>
           <% guestPosts.forEach((guestPost, index) => {%>
           <div class="guestPosts">
-            <h3><%= guestPosts.length - index %> 번째 글</h3>
+            <header>
+              <span><%= guestPosts.length - index %></span>
+              <span class="published"
+                ><%=`${(!guestPost.updated)? '포스트' : '업데이트'} / 작성일자 :
+                ${guestPost.updatedDate.toLocaleString()}`%></span
+              >
+            </header>
             <p>
-              <div class=guestPostContent><%= guestPost.content %>
-                <br />
-                <span class="published"
-                  ><%=`${(!guestPost.updated)? '포스트' : '업데이트'} / 작성일자 :
-                  ${guestPost.updatedDate.toLocaleString()}`%></span
-                >
-              </div>
+              <div class=guestPostContent><%= guestPost.content %></div>
             </p>
             <a href="/visitor/<%= guestPost._id %>/update"><button id='postUpdateBtn'>수정</button></a>
             <a href="/visitor/<%= guestPost._id %>/delete"><button>삭제</button></a>

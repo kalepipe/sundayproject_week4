@@ -1,0 +1,45 @@
+h1 {
+  margin: 2rem 1rem;
+}
+
+.guestPosts {
+  margin: 2rem 1rem;
+  padding: 1rem;
+  border: 3px solid black;
+  text-align: left;
+  width: 80%;
+  height: 20%;
+}
+
+.guestPosts header {
+  text-align: left;
+}
+
+.guestPostContent {
+  /* display: flex; */
+  background-color: rgb(230, 230, 230);
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.guestPostFormSection {
+  border-top: black 1px solid;
+  border-bottom: black 1px solid;
+  padding: 1em;
+  padding-bottom: 2em;
+  background-color: aliceblue;
+  /* position: relative; */
+  /* height: 100%; */
+}
+
+#guestPostForm {
+  height: 100%;
+}
+#guestPostForm textarea {
+  width: 90%;
+  min-height: 10vh;
+}
+
+.guestPosts .guestPostContent {
+  display: block;
+}

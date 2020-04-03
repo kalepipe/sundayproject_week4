@@ -1,0 +1,56 @@
+main {
+  width: 80%;
+  margin: 0 auto;
+}
+
+h1 {
+  margin: 3rem 0;
+}
+
+form {
+  margin: 2rem 0;
+  margin-bottom: 1rem;
+}
+
+form .postTitle,
+form .postContent {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+
+form .postWrite-title,
+form .postWrite-content {
+  margin-top: 2rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  margin-top: 1em;
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+
+input {
+  height: 5vh;
+}
+
+textarea {
+  height: 50vh;
+}
+
+.submitButton {
+  text-align: right;
+  width: 100%;
+  margin: 0;
+  padding-top: 0.5rem;
+  border-top: 1px solid rgb(198, 198, 198);
+  box-sizing: border-box;
+}
+
+.submitButton #postSubmit {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  margin: 1rem;
+}

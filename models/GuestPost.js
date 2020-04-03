@@ -4,7 +4,7 @@ const guestPostSchema = new mongoose.Schema({
   _id: mongoose.Types.ObjectId,
   content: { type: String, required: true },
   updatedDate: { type: Date, default: Date.now },
-  updated: { type: Boolean, default: false }
+  updated: { type: Boolean }
 });
 
 const GuestPost = mongoose.model('Guestpost', guestPostSchema);

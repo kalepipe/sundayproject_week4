@@ -19,7 +19,11 @@ router.get('/project', indexController.project);
 router.get('/gallery', indexController.gallery);
 
 // diary
-router.get('/diary', postController.diary);
+router.get('/diary', postController.viewPosts);
+router.post('/diary', postController.createPost);
+router.get('/diary/write', postController.writePost);
+router.get('/diary/:postId', postController.viewPost);
+router.get('/diary/:postId/delete', postController.deletePost);
 
 // visitor
 router.get('/visitor', guestController.visitorPageView);

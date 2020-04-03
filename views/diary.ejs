@@ -23,24 +23,33 @@
     <main>
       <!-- section -->
       <sction class="main">
-        <!-- post -->
+        <!-- posts -->
+        <% posts.forEach(post => { %>
         <div class="post">
           <div class="img">
-            <img src="" alt="포스트 게시물 사진" />
+            <img src="../public/imgs/post/2.jpg" alt="포스트 게시물 사진" />
           </div>
           <div class="description">
-            <h2></h2>
-            <p></p>
+            <h2><%= post.title %></h2>
+            <p><%= post.content %></p>
             <span id="more">
-              <a href="">전체 글 보기</a>
+              <a href="/diary/<%= post._id %>">전체 글 보기</a>
             </span>
             <span id="date">
-              2020-03-02
+              <%= (post.updated) ? `수정 : ${post.updatedDate.toLocaleString()}`
+              : `작성 : ${post.postedDate.toLocaleString()}` %>
             </span>
           </div>
         </div>
+        <% }) %>
       </sction>
     </main>
+
+    <div class="createPost">
+      <a href="/diary/write"
+        ><button id="createPostButton">글 만들기</button></a
+      >
+    </div>
 
     <!-- footer -->
     <footer>
@@ -50,5 +59,6 @@
     <i class="fas fa-arrow-circle-up fa-2x" id="home"></i>
 
     <script src="../libs/common.js"></script>
+    <script src="../libs/diary.js"></script>
   </body>
 </html>

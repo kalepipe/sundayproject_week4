@@ -1,5 +1,33 @@
-main{
-    color:black;
-    background-color: #ecf0f1;
-    padding: 2em 2%;
+main {
+  color: black;
+  background-color: white;
+  padding: 1rem;
+}
+
+.postView h1 {
+  text-align: center;
+  margin: 2rem;
+  /* margin: auto; */
+}
+
+.postView section {
+  width: 80vw;
+  text-align: left;
+  margin: auto;
+  font-size: 1.2rem;
+}
+
+.editButtons {
+  text-align: right;
+  margin: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid rgb(198, 198, 198);
+  box-sizing: border-box;
+}
+
+.editButtons #deleteButton,
+.editButtons #updateButton {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  margin: 1rem 0.2rem;
 }
